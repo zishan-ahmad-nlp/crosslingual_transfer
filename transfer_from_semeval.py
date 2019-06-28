@@ -38,7 +38,7 @@ set_session(tf.Session(config=config))
 # In[3]:
 
 
-ft = fastText.load_model("/home1/zishan/raghav/wiki.hi.bin")
+ft = fastText.load_model("wiki.hi.bin")
 
 nb_embedding_dims = ft.get_dimension()
 nb_sequence_length = 75
