@@ -224,9 +224,9 @@ model = compile_model_bilstm_cnn(no_labels = n_labels)
 # In[ ]:
 
 
-train_file = '/home1/zishan/raghav/Data/train.txt'
-weights_file ='/home1/zishan/raghav/weights/bilstm_3cnn_dropout=0.5.h5'
-log_file = '/home1/zishan/raghav/logs/bilstm_3cnn_dropout=0.5.txt'
+train_file = 'Data/train.txt'
+weights_file ='weights/bilstm_3cnn_dropout=0.5.h5'
+log_file = 'logs/bilstm_3cnn_dropout=0.5.txt'
 batch_size = 16
 check_for_generator = 2
 tokenize = True
@@ -471,21 +471,21 @@ for test_number in range(1):
         train_sentences = train_sentences
         devLabels = dev_labels
         number_of_tests = 1
-        transmat = np.loadtxt('/home1/zishan/raghav/fastText_multilingual/alignment_matrices/hi.txt')
+        transmat = np.loadtxt('fastText_multilingual/alignment_matrices/hi.txt')
         number_of_epochs = 200
         labels2Id = labels2Idx
-        log_file = '/home1/zishan/raghav/logs/tl_crowdflower_not_crosslingual_embedding_' +string+'_'+str(test_number)+'.txt' 
+        log_file = 'logs/tl_crowdflower_not_crosslingual_embedding_' +string+'_'+str(test_number)+'.txt' 
         print("log file: %s" %(log_file))
-        weights_file='/home1/zishan/raghav/weights/tl_crowdflower_not_crosslingual_embedding_'+string+'_'+str(test_number)+'.h5'
+        weights_file='weights/tl_crowdflower_not_crosslingual_embedding_'+string+'_'+str(test_number)+'.h5'
         print("save weights file: %s" %(weights_file))
         batch_size=16
-        train_file='/home1/zishan/raghav/Data/train_total.txt'
+        train_file='Data/train_total.txt'
         f1_measure='macro'
         pos_label=1
         strategy = unfreeze_strategy[i]
         print(strategy)
         load_model_weights=True
-        load_weights_file = '/home1/zishan/raghav/weights/pretrain_crowdflower_bilstm_3cnn.h5'
+        load_weights_file = 'weights/pretrain_crowdflower_bilstm_3cnn.h5'
         nb_sequence_length = nb_sequence_length
         nb_embedding_dims= nb_embedding_dims
         check_for_generator=3
