@@ -337,8 +337,8 @@ import nltk
 # In[21]:
 
 
-train_file = '/home1/zishan/raghav/Data/semEval2017.txt'
-dev_file = '/home1/zishan/raghav/Data/semEval2017.txt'
+train_file = 'Data/semEval2017.txt'
+dev_file = 'Data/semEval2017.txt'
 train_sentences, train_labels, dev_sentences, dev_labels, labels2Idx = train_dev_sentences_semeval(train_file, dev_file, 4)
 
 
